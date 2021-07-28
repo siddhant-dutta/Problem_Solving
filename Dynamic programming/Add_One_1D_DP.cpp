@@ -23,11 +23,11 @@ int dp[200001];
     2) this is because we find that every single digit number always starts from 10 after just a 
         few operations 
 
-    3) dpi=2 , ∀ i in [0,8]
-       dpi=3, if i=9
+    3) dp[i] = 2 , ∀ i in [0,8]
+       dp[i] = 3, if i=9
         (The final number after applying 9 operations to the number 10 is 109.)
 
-    4) dpi=dpi−9+dpi−10, Otherwise.
+    4) dp[i] = dp[i−9] + dp[i] − 10, Otherwise.
         (length would be the sum of i−9 operations and i−10 operations.)
         We can precalculate the above table until m (Note: 1≤m<2⋅105).
 */
